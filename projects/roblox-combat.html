@@ -15,17 +15,16 @@
     <h2>Overview</h2>
     <p>
       A focused melee combat prototype built to demonstrate animation-driven attacks,
-      combat state management, blocking with stamina-based damage mitigation,
-      directional dodging with animation-synchronized invulnerability frames,
-      and integrated ability usage in a multiplayer environment.
+      combat state management, directional blocking, dodge mechanics with animation-synchronized
+      invulnerability frames, guard break interactions, and a modular ability system with
+      mana/resource management in a multiplayer environment.
     </p>
-
   </section>
 
   <section>
     <h2>Demo</h2>
     <p>
-      <!-- Replace with YouTube embed? -->
+      <!-- Replace with YouTube embed -->
       <em>Gameplay video coming soon</em>
     </p>
   </section>
@@ -33,20 +32,20 @@
   <section>
     <h2>Core Features</h2>
     <ul>
-      <li>4-hit light attack combo system</li>
-      <li>Animation-based hit windows</li>
+      <li>4-hit light attack combo system with animation-synchronized hit windows</li>
       <li>Stamina, health, and mana systems with action-based drain and regeneration</li>
-      <li>Enemy hit reactions and death</li>
+      <li>Directional dodging with i-frames validated on the server</li>
+      <li>Enemy hit reactions, guard break states, and death sequences</li>
     </ul>
   </section>
 
   <section>
     <h2>Systems Breakdown</h2>
     <ul>
-      <li>Combat state machine (Idle, Attacking, Recovery)</li>
-      <li>Combo input buffering and reset timing</li>
-      <li>Server-authoritative hit detection</li>
-      <li>Enemy AI using finite state machine logic</li>
+      <li>Combat state machine (Idle, Attacking, Recovery, Ability Use)</li>
+      <li>Combo input buffering and reset timing for responsive attack chains</li>
+      <li>Server-authoritative hit detection and ability validation to prevent exploits</li>
+      <li>Enemy AI using finite state machine logic for behavior and reactions</li>
     </ul>
   </section>
 
@@ -57,56 +56,86 @@
         Directional blocking system with stamina-based damage mitigation and guard stamina tracking
       </li>
       <li>
-        Heavy attacks that deal increased block stamina damage and trigger guard break states
-        when block stamina is depleted
+        Heavy attacks that apply increased stamina damage to blocking targets and trigger
+        guard break states when block stamina is depleted
       </li>
       <li>
         Guard break transitions enemies into vulnerable reaction states, enabling follow-up attacks
       </li>
+      <li>
+        Dodge mechanic with animation-synchronized invulnerability frames (i-frames), stamina cost, 
+        and recovery timing
+      </li>
     </ul>
   </section>
-  
+
   <section>
     <h2>Ability System Integration</h2>
     <p>
       Implemented a modular ability system designed to integrate directly with the core
-      combat framework, allowing abilities to interact with combat states, stamina,
+      combat framework, allowing abilities to interact with combat states, stamina, 
       mana costs, cooldowns, and enemy reactions.
     </p>
-
     <ul>
-      <li>Abilities define activation conditions, mana cost, cooldown, and combat state transitions</li>
-      <li>Ability activation is validated against current combat state and available resources</li>
-      <li>Abilities can modify damage behavior, apply movement overrides, or trigger enemy reaction states</li>
+      <li>Abilities define activation conditions, resource cost, cooldown, and combat state transitions</li>
+      <li>Activation is validated against combat state, stamina/mana availability, and cooldown timers</li>
+      <li>Abilities can modify damage behavior, movement, or trigger enemy reactions</li>
       <li>Mana regeneration and ability lockout prevent ability spam and invalid overlaps</li>
     </ul>
   </section>
 
   <section>
+    <h2>Event and Progression System</h2>
+    <p>
+      Implemented a modular event management system to track player and enemy states, 
+      flags for quests or scripted sequences, and interactions between player abilities 
+      and world events. This system allows seamless integration of new content without modifying
+      core combat logic.
+    </p>
+  </section>
+
+  <section>
+    <h2>Animation Integration</h2>
+    <p>
+      Combat actions, dodge frames, and guard break reactions are synchronized with animation
+      events to ensure accurate hit detection and state transitions. The system is designed
+      to be transferable to 3D environments with keyframe-based animations.
+    </p>
+  </section>
+
+  <section>
     <h2>Technical Details</h2>
     <ul>
-      <li>Roblox Lua (client/server separation)</li>
-      <li>RemoteEvents for combat replication</li>
-      <li>Modular script architecture</li>
-      <li>Server validation to prevent exploit damage</li>
+      <li>Roblox Lua (client/server separation, modular script architecture)</li>
+      <li>RemoteEvents for secure combat and ability replication</li>
+      <li>State machines for combat, abilities, and enemy AI</li>
+      <li>Server validation for hit detection, ability execution, and dodge/block logic to prevent exploits</li>
+      <li>Designed with transferable architecture suitable for C++ or Unity 3D implementations</li>
     </ul>
   </section>
 
   <section>
     <h2>Challenges & Solutions</h2>
     <p>
-      <strong>Problem:</strong> Preventing players from applying damage
-      through spoofed client events.<br>
-      <strong>Solution:</strong> Server validates attack state, timing window,
-      and hit results before applying damage.
+      <strong>Problem:</strong> Preventing players from applying damage or bypassing combat 
+      rules through spoofed client events.<br>
+      <strong>Solution:</strong> Implemented server-side validation for attacks, abilities, 
+      dodge, and block/guard break states synchronized with animation events.
+    </p>
+    <p>
+      <strong>Problem:</strong> Ensuring abilities and dodge mechanics feel responsive without 
+      allowing unintended animation cancel exploits.<br>
+      <strong>Solution:</strong> Input buffering, state machine constraints, and resource 
+      gating (stamina/mana) maintain responsiveness while enforcing valid transitions.
     </p>
   </section>
 
   <section>
     <h2>What I’d Improve Next</h2>
     <ul>
-      <li>Expanded enemy behaviors</li>
-      <li>Improved animation blending</li>
+      <li>Expanded enemy behaviors and AI complexity</li>
+      <li>Enhanced animation blending and keyframe transitions</li>
+      <li>Additional resource-based abilities and combo-heavy attack variations</li>
     </ul>
   </section>
 
