@@ -1,13 +1,25 @@
+:root {
+  --bg: #fefefe;
+  --text: #222;
+  --accent: #007ACC;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #f0f0f0;
+  --accent: #4aa3df;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  color: #222;
-  background-color: #fefefe;
+  color: var(--text);
+  background-color: var(--bg);
   padding: 2rem;
 }
 
 h1, h2 {
-  color: #007ACC;
+  color: var(--accent);
 }
 
 ul {
@@ -17,9 +29,17 @@ ul {
 
 a {
   text-decoration: none;
-  color: #007ACC;
+  color: var(--accent);
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+section {
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
 }
