@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Melee Combat System – Roblox</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <a href="../index.html">← Back</a>
+
+  <h1>Melee Combat System Prototype (Roblox)</h1>
+
+  <section>
+    <h2>Overview</h2>
+    <p>
+      A focused melee combat prototype built to demonstrate
+      animation-driven attacks, combat state management,
+      stamina usage, and basic enemy AI in a multiplayer environment.
+    </p>
+  </section>
+
+  <section>
+    <h2>Demo</h2>
+    <p>
+      <!-- Replace with YouTube embed? -->
+      <em>Gameplay video coming soon</em>
+    </p>
+  </section>
+
+  <section>
+    <h2>Core Features</h2>
+    <ul>
+      <li>4-hit light attack combo system</li>
+      <li>Animation-based hit windows</li>
+      <li>Stamina drain and regeneration</li>
+      <li>Enemy hit reactions and death</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Systems Breakdown</h2>
+    <ul>
+      <li>Combat state machine (Idle, Attacking, Recovery)</li>
+      <li>Combo input buffering and reset timing</li>
+      <li>Server-authoritative hit detection</li>
+      <li>Enemy AI using finite state machine logic</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Technical Details</h2>
+    <ul>
+      <li>Roblox Lua (client/server separation)</li>
+      <li>RemoteEvents for combat replication</li>
+      <li>Modular script architecture</li>
+      <li>Server validation to prevent exploit damage</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Challenges & Solutions</h2>
+    <p>
+      <strong>Problem:</strong> Preventing players from applying damage
+      through spoofed client events.<br>
+      <strong>Solution:</strong> Server validates attack state, timing window,
+      and hit results before applying damage.
+    </p>
+  </section>
+
+  <section>
+    <h2>What I’d Improve Next</h2>
+    <ul>
+      <li>Expanded enemy behaviors</li>
+      <li>Improved animation blending</li>
+    </ul>
+  </section>
+
+</body>
+</html>
