@@ -14,10 +14,12 @@
   <section>
     <h2>Overview</h2>
     <p>
-      A focused melee combat prototype built to demonstrate
-      animation-driven attacks, combat state management,
-      stamina usage, and basic enemy AI in a multiplayer environment.
+      A focused melee combat prototype built to demonstrate animation-driven attacks,
+      combat state management, blocking with stamina-based damage mitigation,
+      directional dodging with animation-synchronized invulnerability frames,
+      and integrated ability usage in a multiplayer environment.
     </p>
+
   </section>
 
   <section>
@@ -33,7 +35,7 @@
     <ul>
       <li>4-hit light attack combo system</li>
       <li>Animation-based hit windows</li>
-      <li>Stamina drain and regeneration</li>
+      <li>Stamina, health, and mana systems with action-based drain and regeneration</li>
       <li>Enemy hit reactions and death</li>
     </ul>
   </section>
@@ -45,6 +47,38 @@
       <li>Combo input buffering and reset timing</li>
       <li>Server-authoritative hit detection</li>
       <li>Enemy AI using finite state machine logic</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Extended Mechanics</h2>
+    <ul>
+      <li>
+        Directional blocking system with stamina-based damage mitigation and guard stamina tracking
+      </li>
+      <li>
+        Heavy attacks that deal increased block stamina damage and trigger guard break states
+        when block stamina is depleted
+      </li>
+      <li>
+        Guard break transitions enemies into vulnerable reaction states, enabling follow-up attacks
+      </li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>Ability System Integration</h2>
+    <p>
+      Implemented a modular ability system designed to integrate directly with the core
+      combat framework, allowing abilities to interact with combat states, stamina,
+      mana costs, cooldowns, and enemy reactions.
+    </p>
+
+    <ul>
+      <li>Abilities define activation conditions, mana cost, cooldown, and combat state transitions</li>
+      <li>Ability activation is validated against current combat state and available resources</li>
+      <li>Abilities can modify damage behavior, apply movement overrides, or trigger enemy reaction states</li>
+      <li>Mana regeneration and ability lockout prevent ability spam and invalid overlaps</li>
     </ul>
   </section>
 
