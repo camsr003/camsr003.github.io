@@ -1,10 +1,4 @@
 :root {
-  --bg: #fefefe;
-  --text: #222;
-  --accent: #007ACC;
-}
-
-body.dark {
   --bg: #1e1e1e;
   --text: #f0f0f0;
   --accent: #4aa3df;
