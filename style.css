@@ -1,8 +1,13 @@
 :root {
+  --bg: #fefefe;
+  --text: #222;
+  --accent: #007ACC;
+}
+
+body.dark {
   --bg: #1e1e1e;
   --text: #f0f0f0;
   --accent: #4aa3df;
-  --box: #153245;
 }
 
 body {
@@ -32,7 +37,7 @@ a:hover {
 }
 
 section {
-  background: var(--box);
+  background: var(--bg);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   padding: 1.5rem;
