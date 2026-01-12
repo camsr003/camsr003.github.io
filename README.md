@@ -1,8 +1,7 @@
 # Cameron Richardson – Game Development Portfolio
 
 This repository hosts my personal game development portfolio site, built using GitHub Pages.
-It showcases selected systems, prototypes, and technical work focused on gameplay programming,
-combat systems, and game mechanics.
+It showcases selected systems, prototypes, technical work focused on gameplay programming and game mechanics, and other programming related projects.
 
 **Live Site:** https://camsr003.github.io/
 
@@ -10,7 +9,7 @@ combat systems, and game mechanics.
 
 ## Overview
 
-This portfolio highlights my experience designing and implementing gameplay systems,
+This portfolio highlights my experience designing and implementing gameplay systems as well as other projects,
 with a focus on:
 
 - Combat systems and character control
@@ -31,8 +30,8 @@ A modular melee combat prototype designed to demonstrate animation-driven combat
 server-authoritative validation, and extensible mechanics.
 
 **Key systems include:**
-- Combo-based light attacks with input buffering
-- Directional blocking with stamina-based guard and guard breaks
+- Combo-based attacks with input buffering
+- Blocking with stamina-based guard and guard breaks
 - Dodge mechanics with animation-synchronized invulnerability frames
 - Heavy attacks that break guard states
 - Integrated ability system with mana costs and cooldowns
@@ -68,23 +67,8 @@ game development skills applicable to C++, Unity, and other 3D engines:
 
 ---
 
-## About the Portfolio
-
-Some projects shown here (especially Roblox-based systems) are not publicly available
-as source repositories. Instead, this portfolio focuses on:
-
-- System design explanations
-- Feature breakdowns
-- Gameplay demonstrations
-- Technical decision-making
-
-This approach mirrors professional game development workflows where internal tools
-and prototypes are not publicly distributed.
-
----
-
 ## Contact
 
-Email: camsrichardson003@example.com  
+Email: camsrichardson003@gmail.com  
 LinkedIn: https://www.linkedin.com/in/cameron-richardson-245b5527a/
 GitHub: https://github.com/camsr003
