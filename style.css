@@ -2,6 +2,7 @@
   --bg: #1e1e1e;
   --text: #f0f0f0;
   --accent: #4aa3df;
+  --box: #2a2a2a;
 }
 
 body {
@@ -31,7 +32,7 @@ a:hover {
 }
 
 section {
-  background: var(--bg);
+  background: var(--box);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   padding: 1.5rem;
