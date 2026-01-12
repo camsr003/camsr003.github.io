@@ -9,7 +9,7 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: var(--text);
-  background-color: var(--bg);
+  background-color: var(--box);
   padding: 2rem;
 }
 
