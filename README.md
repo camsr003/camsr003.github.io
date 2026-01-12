@@ -1,4 +1,4 @@
-# Cameron Richardson – Game Development Portfolio
+# Cameron Richardson – Portfolio
 
 This repository hosts my personal game development portfolio site, built using GitHub Pages.
 It showcases selected systems, prototypes, technical work focused on gameplay programming and game mechanics, and other programming related projects.
