@@ -18,6 +18,9 @@
       directional blocking, dodge mechanics with animation-synchronized invulnerability frames, guard break interactions, 
       and a modular ability system with resource management in a multiplayer environment.
     </p>
+    <p>
+      <a href="https://www.roblox.com/games/17452901910/Eternal-Winter">Linke to the game in which this system is used</a>
+    </p>
   </section>
 
   <section>
@@ -59,21 +62,16 @@
   </section>
 
   <section>
-    <h2>Event & Progression System</h2>
-    <p>
-      A modular system tracks player/enemy states, quest flags, and world interactions. It enables 
-      seamless integration of new content without altering core combat logic.
-    </p>
-  </section>
-
-  <section>
     <h2>Challenges & Solutions</h2>
     <ul>
       <li>
         <strong>Preventing exploits:</strong> Server-side validation ensures attacks, abilities, dodges, and blocks follow combat rules.
       </li>
       <li>
-        <strong>Responsive abilities:</strong> Input buffering, state machine constraints, and resource gating maintain responsiveness while preventing unintended cancels.
+        <strong>Responsive abilities:</strong> Input buffering, preloading animations, state machine constraints, and resource gating maintain responsiveness while preventing unintended cancels.
+      </li>
+      <li>
+        <strong>Enemy attack coordination:</strong> Implemented an "Attack Queue" module that tells the NPC when it is their turn to attack, creating less combat pressure for the player.
       </li>
     </ul>
   </section>
@@ -95,6 +93,7 @@
       <li>I understood the importance of modular systems for abilities, AI, and event handling for future scalability.</li>
       <li>Balancing resources like stamina and mana requires careful tuning and playtesting to make gameplay engaging and strategic.</li>
       <li>Debugging multiplayer interactions taught me the value of testing and thinking about edge cases for exploits and animation desyncs.</li>
+      <li>Other mechanics implemented in this game (Data storage, Inventory management, quest progression system) have taught me how to integrate different systems together into one functional project.</li>
     </ul>
   </section>
 
