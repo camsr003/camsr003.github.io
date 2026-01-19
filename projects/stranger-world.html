@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stranger World</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <a href="../index.html">← Back</a>
+
+  <h1>Stranger World Game</h1>
+
+  <section>
+    <h2>Overview</h2>
+    <p>
+      "Stranger World" is an open-world roleplay game playable on Roblox, a game based on the Netflix show "Stranger Things". 
+      This project involved contributing to a live game with an established codebase. 
+      I was responsible for integrating new gameplay mechanics alongside UI and backend systems, which required rewiring and refactoring existing logic to support new interactions, data flow, and player states.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contributions</h2>
+    <ul>
+      <li>Designed and implemented new UI logic that integrated with existing backend systems</li>
+      <li>Rewired and extended legacy code to support new mechanic-driven behaviors and state changes</li>
+      <li>Integrated and adapted free-to-use, open-source modules to fit the game’s architecture and design constraints</li>
+      <li>Refactored portions of existing systems to improve compatibility, readability, and maintainability</li>
+      <li>Ensured new mechanics worked seamlessly with pre-existing progression, data storage, and event systems</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Challenges & Solutions</h2>
+    <ul>
+      <li>
+        <strong>Existing systems were not originally designed with these new mechanics in mind, 
+            making direct implementation risky without breaking existing functionality:</strong>
+             I analyzed how current systems handled player state, events, and data flow, then extended those systems rather than replacing them. 
+             This allowed new mechanics to plug into established logic while preserving stability.
+      </li>
+      <li>
+        <strong>Third-party modules did not always align with the game’s existing architecture:</strong> I isolated external modules and modified their interfaces where necessary, allowing them to integrate cleanly without leaking implementation details into core systems.
+      </li>
+      <li>
+        <strong>Enemy attack coordination:</strong> Implemented an "Attack Queue" module that tells the NPC when it is their turn to attack, creating less combat pressure for the player.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Future Improvements</h2>
+    <ul>
+      <li>Further modularize gameplay mechanics to improve reuse and scalability</li>
+      <li>Adding debug tools and visualizers</li>
+      <li>Making more user-friendly mechanics to boost accessibility</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Takeaways</h2>
+    <ul>
+      <li>Learned how to safely introduce new gameplay mechanics into an existing production codebase.</li>
+      <li>Improved ability to reason about and modify legacy systems without destabilizing them.</li>
+      <li>Gained experience coordinating gameplay, backend, and UI logic across multiple systems.</li>
+      <li>Developed stronger judgment around when to refactor versus extend existing code.</li>
+      <li>Reinforced the importance of architectural consistency in collaborative game development.</li>
+    </ul>
+  </section>
+
+</body>
+</html>
