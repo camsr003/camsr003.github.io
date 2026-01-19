@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Horror Cafe Game</title>
+  <title>Yokai Cafe</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
   <a href="../index.html">← Back</a>
 
-  <h1>Horror Cafe Game</h1>
+  <h1>Yokai Cafe</h1>
 
   <section>
     <h2>Overview</h2>
     <p>
-      ...
+      <strong>Yokai Cafe</strong> is a first-person horror café game where players juggle normal work tasks while something feels increasingly wrong.
+      The game is structured around a full workday using a phase-based system (opening, serving, closing) that controls pacing, progression,
+      and when unsettling events can occur.
+    </p>
+    <p>
+      It’s built with a modular, data-driven approach using <strong>ScriptableObjects</strong>, making it easy to iterate on systems,
+      add new mechanics, and experiment with horror elements layered on top of everyday gameplay.
     </p>
   </section>
 
@@ -29,22 +35,66 @@
   <section>
     <h2>Core Features</h2>
     <ul>
-      <li>...</li>
+      <li>
+        <strong>Phase-Based Gameplay Loop:</strong>
+        The café day is split into opening, serving, and closing phases, which control available interactions and help pace both gameplay and horror.
+      </li>
+      <li>
+        <strong>Customer Ordering System:</strong>
+        Customers place randomized orders that the player must prepare and deliver correctly to keep the café running.
+      </li>
+      <li>
+        <strong>Interaction System:</strong>
+        A unified system for interacting with doors, light switches, items, and other world objects.
+      </li>
+      <li>
+        <strong>Item Behavior System:</strong>
+        Items perform context-specific actions when used, allowing new items to be added without rewriting core logic.
+      </li>
+      <li>
+        <strong>ScriptableObject-Driven Design:</strong>
+        Data and behavior are separated to keep systems flexible, reusable, and easy to iterate on.
+      </li>
     </ul>
   </section>
 
   <section>
     <h2>Challenges & Solutions</h2>
+
     <p>
-      <strong>Problem:</strong> ...<br>
-      <strong>Solution:</strong> ...
+      <strong>Keeping systems manageable as scope grew</strong><br>
+      → Solved by separating data and logic using ScriptableObjects, reducing hard-coded behavior.
+    </p>
+
+    <p>
+      <strong>Managing gameplay flow across different phases</strong><br>
+      → Built a centralized phase manager to handle transitions and avoid scattered state checks.
+    </p>
+
+    <p>
+      <strong>Making routine tasks feel tense instead of repetitive</strong><br>
+      → Designed core mechanics to support horror events without interrupting normal gameplay flow.
     </p>
   </section>
 
   <section>
-    <h2>What I’d Do Next</h2>
+    <h2>Future Improvements</h2>
     <ul>
-      <li>...</li>
+      <li>More horror events tied to specific phases</li>
+      <li>Deeper customer behaviors and order variations</li>
+      <li>Persistent consequences for player mistakes</li>
+      <li>Dynamic lighting and audio systems</li>
+      <li>Save/load support and difficulty tuning</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Takeaways</h2>
+    <ul>
+      <li>System-driven design makes iteration faster and safer</li>
+      <li>Separating data from logic helps projects scale cleanly</li>
+      <li>Horror works best when layered onto familiar mechanics</li>
+      <li>Strong foundations early make future features easier to add</li>
     </ul>
   </section>
 
